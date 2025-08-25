@@ -165,7 +165,9 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/ship/cargo)
 "bZ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
@@ -505,7 +507,9 @@
 	id = "Medical_shutters"
 	},
 /obj/structure/grille,
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/ship/medical)
 "gN" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
@@ -550,8 +554,15 @@
 	id = "StarEngi_shutters";
 	name = "Shutters"
 	},
-/obj/machinery/atmospherics/pipe/layer_manifold,
-/turf/open/floor/plating,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 6
+	},
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/ship/engineering/engines/starboard)
 "hM" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
@@ -716,6 +727,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
+"kw" = (
+/obj/machinery/atmospherics/pipe/layer_manifold,
+/turf/closed/wall/mineral/titanium,
+/area/ship/engineering/engines/port)
 "kD" = (
 /obj/structure/table/wood/reinforced,
 /obj/item/toy/cards/deck,
@@ -750,6 +765,12 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering/engines/starboard)
+"kW" = (
+/obj/machinery/atmospherics/components/unary/outlet_injector/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/engine/hull,
+/area/ship/external)
 "kZ" = (
 /turf/closed/wall/mineral/titanium,
 /area/ship/external)
@@ -782,7 +803,9 @@
 	id = "dormtwoshutter"
 	},
 /obj/structure/grille,
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/ship/crew/dorm/dormtwo)
 "mf" = (
 /obj/machinery/door/airlock/mining/glass{
@@ -959,8 +982,7 @@
 /turf/open/floor/plasteel,
 /area/ship/hallway/fore)
 "oR" = (
-/obj/machinery/atmospherics/components/unary/outlet_injector/atmos,
-/obj/machinery/light/directional/east,
+/obj/machinery/atmospherics/components/unary/passive_vent/layer4,
 /turf/open/floor/engine/hull,
 /area/ship/external)
 "oT" = (
@@ -1054,9 +1076,6 @@
 /turf/open/floor/carpet/red,
 /area/ship/crew/dorm/dormtwo)
 "pR" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/siphon/on{
-	dir = 1
-	},
 /obj/machinery/light/directional/east,
 /turf/open/floor/engine/hull,
 /area/ship/external)
@@ -1099,16 +1118,14 @@
 /turf/open/floor/wood/walnut,
 /area/ship/crew/canteen)
 "qD" = (
-/obj/machinery/atmospherics/pipe/simple/dark/hidden/layer1{
-	dir = 5
-	},
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
+	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+/obj/machinery/atmospherics/pipe/simple/dark/hidden/layer1{
 	dir = 6
 	},
 /turf/open/floor/plasteel/tech,
@@ -1198,7 +1215,9 @@
 	id = "Fridge_shutter"
 	},
 /obj/structure/grille,
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/ship/crew/canteen/kitchen{
 	name = "Kitchen_freezer"
 	})
@@ -1239,8 +1258,8 @@
 /obj/machinery/power/terminal{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 10
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
+	dir = 4
 	},
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -1459,7 +1478,9 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/ship/cargo)
 "wW" = (
 /obj/machinery/hydroponics/constructable,
@@ -1473,8 +1494,8 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 5
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering/engines/port)
@@ -1563,7 +1584,7 @@
 	},
 /obj/machinery/door/poddoor{
 	dir = 4;
-	id = "PortEngi_shutters"
+	id = "PortEngi_Blastdoors"
 	},
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -1619,6 +1640,7 @@
 	},
 /obj/item/radio/intercom/directional/north,
 /obj/machinery/light/dim/directional/east,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering/engines/port)
 "AS" = (
@@ -1685,12 +1707,6 @@
 /obj/machinery/atmospherics/pipe/layer_manifold{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 9
-	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
@@ -1700,11 +1716,11 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering/engines/starboard)
 "BB" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 6
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 6
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/engineering/engines/starboard)
@@ -1819,7 +1835,9 @@
 	launch_status = 0;
 	preferred_direction = 4
 	},
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/ship/cargo)
 "Dz" = (
 /obj/structure/window/reinforced/fulltile/shuttle,
@@ -1827,7 +1845,9 @@
 	id = "workshop_shutter"
 	},
 /obj/structure/grille,
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/ship/science/workshop)
 "DQ" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
@@ -1955,7 +1975,7 @@
 	},
 /obj/machinery/door/poddoor{
 	dir = 4;
-	id = "PortEngi_shutters"
+	id = "PortEngi_Blastdoors"
 	},
 /turf/open/floor/plating,
 /area/ship/engineering/engines/port)
@@ -1982,6 +2002,7 @@
 	name = "Engine Blastdoors";
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/dark/hidden/layer1,
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering/engines/starboard)
 "FQ" = (
@@ -2034,7 +2055,9 @@
 	id = "WasserUtility_shitter"
 	},
 /obj/structure/grille,
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/ship/crew/toilet)
 "GD" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
@@ -2059,7 +2082,9 @@
 	id = "Cryo_shutter"
 	},
 /obj/structure/grille,
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/ship/crew/cryo)
 "GL" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
@@ -2197,8 +2222,9 @@
 	id = "PortEngi_shutters";
 	name = "Shutters"
 	},
-/obj/machinery/atmospherics/pipe/layer_manifold,
-/turf/open/floor/plating,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/ship/engineering/engines/port)
 "HE" = (
 /obj/machinery/power/apc/auto_name/directional/west,
@@ -2256,7 +2282,6 @@
 /obj/structure/closet/wall/blue/directional/south{
 	name = "Captain's locker"
 	},
-/obj/item/radio/headset/clip/alt/captain,
 /obj/item/gps{
 	pixel_y = 6;
 	pixel_x = -8
@@ -2569,7 +2594,9 @@
 /obj/machinery/door/airlock/external{
 	dir = 1
 	},
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/ship/hallway/aft)
 "Ng" = (
 /obj/machinery/door/airlock/mining/glass{
@@ -2601,6 +2628,10 @@
 "No" = (
 /turf/closed/wall/mineral/titanium,
 /area/ship/crew/toilet)
+"Nw" = (
+/obj/machinery/atmospherics/pipe/layer_manifold,
+/turf/closed/wall/mineral/titanium,
+/area/ship/engineering/engines/starboard)
 "NC" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/components/binary/pump/on/layer2{
@@ -2701,7 +2732,9 @@
 /obj/machinery/door/poddoor/shutters{
 	id = "Hydro_shutters"
 	},
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/ship/crew/hydroponics)
 "Pk" = (
 /obj/machinery/light/floor/hangar,
@@ -2740,7 +2773,9 @@
 	id = "dormoneshutter"
 	},
 /obj/structure/grille,
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/ship/crew/dorm)
 "PS" = (
 /obj/machinery/atmospherics/pipe/manifold4w/scrubbers/hidden/layer4,
@@ -2789,7 +2824,9 @@
 	id = "Hydro_shutters"
 	},
 /obj/structure/grille,
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/ship/crew/hydroponics)
 "QK" = (
 /obj/structure/closet/wall/directional/north{
@@ -2968,7 +3005,9 @@
 /obj/machinery/door/airlock/external{
 	dir = 4
 	},
-/turf/open/floor/engine/hull/reinforced,
+/turf/open/floor/engine/hull/reinforced{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
 /area/ship/hallway/aft)
 "Rz" = (
 /obj/machinery/atmospherics/pipe/manifold4w/scrubbers/hidden/layer4,
@@ -3184,6 +3223,7 @@
 	},
 /obj/item/radio/intercom/directional/south,
 /obj/machinery/light/dim/directional/east,
+/obj/machinery/atmospherics/pipe/simple/dark/hidden/layer1,
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering/engines/starboard)
 "TJ" = (
@@ -3195,6 +3235,13 @@
 	},
 /obj/structure/closet/crate/bin,
 /turf/open/floor/plasteel,
+/area/ship/crew/canteen)
+"Ue" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/wood/walnut,
 /area/ship/crew/canteen)
 "Uf" = (
 /obj/structure/railing{
@@ -3601,21 +3648,21 @@ vM
 (4,1,1) = {"
 lY
 lY
-lY
-sM
+oR
+kw
 AA
 tK
 wZ
 HD
 pR
 lY
-oR
+pR
 ht
 qD
 Fz
 Ty
-eU
-lY
+Nw
+kW
 lY
 lY
 vM
@@ -3895,7 +3942,7 @@ Xc
 MO
 MO
 JB
-MO
+Ue
 MO
 ID
 tl
